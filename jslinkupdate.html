@@ -1,0 +1,22 @@
+<p id="selectablez" onclick="selectText('selectablez')">https://www.fedex.com/apps/fedextrack/?action=track&trackingnumber=<span id="myAnchor"></span>&cntry_code=us&locale=en_US</p>
+
+
+<script type="text/javascript">
+	document.getElementById("Tracking").addEventListener("keyup", myFunction);
+	function myFunction() {
+		var elementValue = document.getElementById("Tracking").value;
+	    document.getElementById("myAnchor").innerHTML = elementValue;
+	}
+	function selectText(containerid) {
+	    if (document.selection) { // IE
+	        var range = document.body.createTextRange();
+	        range.moveToElementText(document.getElementById(containerid));
+	        range.select();
+	    } else if (window.getSelection) {
+	        var range = document.createRange();
+	        range.selectNode(document.getElementById(containerid));
+	        window.getSelection().removeAllRanges();
+	        window.getSelection().addRange(range);
+	    }
+	}
+</script>
