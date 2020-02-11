@@ -7,11 +7,14 @@
 
 
 <script type="text/javascript">
+	// Listen to the input
 	document.getElementById("Tracking").addEventListener("keyup", myFunction);
+	// Insert the input text
 	function myFunction() {
 		var elementValue = document.getElementById("Tracking").value;
 	    document.getElementById("myAnchor").innerHTML = elementValue;
 	}
+	// select entire link with one click
 	function selectText(containerid) {
 	    if (document.selection) { // IE
 	        var range = document.body.createTextRange();
